@@ -21,6 +21,7 @@ public class Driver {
     }
     public static void promptUser(){    
         System.out.println("In prompt User");
+        System.out.println("Enter Again");
     }
     public static void display(){
         System.out.println("Display");
