@@ -4,6 +4,8 @@
  */
 package vehicle;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author shail
@@ -24,12 +26,19 @@ public class Driver {
         System.out.println("Enter Again");
         //Create an object of type Vehicle , and store it in the variable called myVehicle
             Vehicle myVehicle =new Vehicle();
+        String strGallonsOfGas = JOptionPane.showInputDialog("Enter gallons of gas");
+        double dblGallonOfGas = Double.parseDouble(strGallonsOfGas);
+        myVehicle.setGallonsOfGas(dblGallonOfGas);
+        final String strMilesPerGallon = JOptionPane.showInputDialog("Enter miles per Gallon");
+        final int intMilesPerGallon = Integer.parseInt(strMilesPerGallon);
+        myVehicle.setMilesPerGallon(intMilesPerGallon);
         
-        myVehicle.setGallonsOfGas(12.0);
-        myVehicle.setMilesPerGallon(20);
-        myVehicle.setOdometer(10000);
-        
-        myVehicle.go(40);
+        final String strOdometer = JOptionPane.showInputDialog("Enter Odometer");
+        final int intOdometer = Integer.parseInt(strOdometer);
+        myVehicle.setOdometer(intOdometer);
+        final String strDistanceTravelled = JOptionPane.showInputDialog("Enter distance to travel");
+        final int intDistance = Integer.parseInt(strDistanceTravelled);
+        myVehicle.go(intDistance);
         System.out.println(myVehicle.toString());
         
     }
