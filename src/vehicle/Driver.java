@@ -25,7 +25,8 @@ public class Driver {
         System.out.println("In prompt User");
         System.out.println("Enter Again");
         //Create an object of type Vehicle , and store it in the variable called myVehicle
-            Vehicle myVehicle =new Vehicle();
+        Vehicle myVehicle =new Vehicle();
+        System.out.println(myVehicle.toString());
         String strGallonsOfGas = JOptionPane.showInputDialog("Enter gallons of gas");
         double dblGallonOfGas = Double.parseDouble(strGallonsOfGas);
         myVehicle.setGallonsOfGas(dblGallonOfGas);
@@ -38,6 +39,7 @@ public class Driver {
         myVehicle.setOdometer(intOdometer);
         final String strDistanceTravelled = JOptionPane.showInputDialog("Enter distance to travel");
         final int intDistance = Integer.parseInt(strDistanceTravelled);
+        System.out.println(myVehicle.toString());
         myVehicle.go(intDistance);
         System.out.println(myVehicle.toString());
         
