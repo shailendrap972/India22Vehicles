@@ -17,13 +17,21 @@ public class Driver {
         // TODO code application logic here
         System.out.println("In driver Main");
         promptUser();
-        display();
+     
     }
     public static void promptUser(){    
         System.out.println("In prompt User");
         System.out.println("Enter Again");
+        //Create an object of type Vehicle , and store it in the variable called myVehicle
+            Vehicle myVehicle =new Vehicle();
+        
+        myVehicle.setGallonsOfGas(12.0);
+        myVehicle.setMilesPerGallon(20);
+        myVehicle.setOdometer(10000);
+        
+        myVehicle.go(40);
+        System.out.println(myVehicle.toString());
+        
     }
-    public static void display(){
-        System.out.println("Display");
-    }
+   
 }

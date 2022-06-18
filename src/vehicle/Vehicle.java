@@ -12,6 +12,12 @@ public class Vehicle {
     private int odometer;
     private int milesPerGallon;
     private double gallonsOfGas;
+    public void go (int distance){
+        double gallonsConsumed = distance/ milesPerGallon;
+        gallonsOfGas -=gallonsConsumed;
+        odometer+=distance;
+        
+    }
     public int getOdometer(){
         return odometer;
     }
@@ -46,5 +52,12 @@ public class Vehicle {
     public void setGallonsOfGas(double gallonsOfGas) {
         this.gallonsOfGas = gallonsOfGas;
     }
+
+    @Override
+    public String toString() {
+        return "Gallons Of gas  :" +   gallonsOfGas +   " Odometer : " +   odometer;
+// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+    
     
 }
